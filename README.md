@@ -73,6 +73,89 @@ In `.cursor/mcp.json`:
 }
 ```
 
+## Connecting to Gemini CLI
+
+In `~/.gemini/settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "fabkit": {
+      "url": "https://fabkit-mcp.fabricators.dev/mcp"
+    }
+  }
+}
+```
+
+> **Note:** Gemini CLI does not support the `transport` key — use only `url`.
+
+## Connecting to GitHub Copilot CLI
+
+In `~/.copilot/mcp-config.json`:
+
+```json
+{
+  "mcpServers": {
+    "fabkit": {
+      "type": "http",
+      "url": "https://fabkit-mcp.fabricators.dev/mcp",
+      "tools": ["*"]
+    }
+  }
+}
+```
+
+Alternatively, run `/mcp add` inside the CLI and fill in the fields interactively.
+
+## Connecting to VS Code
+
+In `.vscode/mcp.json` (workspace) or `~/.config/Code/User/mcp.json` (global):
+
+```json
+{
+  "servers": {
+    "fabkit": {
+      "type": "http",
+      "url": "https://fabkit-mcp.fabricators.dev/mcp"
+    }
+  }
+}
+```
+
+> **Note:** VS Code uses `"servers"` (not `"mcpServers"`) as the root key.
+
+## Connecting to Continue.dev
+
+In `~/.continue/config.json`:
+
+```json
+{
+  "mcpServers": [
+    {
+      "name": "fabkit",
+      "type": "streamable-http",
+      "url": "https://fabkit-mcp.fabricators.dev/mcp"
+    }
+  ]
+}
+```
+
+## Connecting to Windsurf
+
+In `~/.codeium/windsurf/mcp_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "fabkit": {
+      "serverUrl": "https://fabkit-mcp.fabricators.dev/mcp"
+    }
+  }
+}
+```
+
+> **Note:** Windsurf uses `"serverUrl"` (not `"url"`) for remote HTTP servers.
+
 ---
 
 ## MCP Protocol
