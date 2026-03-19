@@ -1,0 +1,17 @@
+{
+  "name": "fabkit-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fabkit MCP Server",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "build": "tsc --noEmit",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241106.0",
+    "typescript": "^5.5.0",
+    "wrangler": "^3.80.0"
+  }
+}
